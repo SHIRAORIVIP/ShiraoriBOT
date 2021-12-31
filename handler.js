@@ -53,7 +53,7 @@ module.exports = {
          if (!isNumber(user.rubahlastclaim)) user.rubahlastclaim = 0
          if (!isNumber(user.anjing)) user.anjing = 0
          if (!isNumber(user.anjinglastclaim)) user.anjinglastclaim = 0
-          if (!('registered' in user)) user.registered = false
+          if (!('registered' in user)) user.registered = true
           if (!user.registered) {
             if (!('name' in user)) user.name = this.getName(m.sender)
             if (!isNumber(user.age)) user.age = -1
@@ -490,8 +490,8 @@ ketik *.on delete* untuk mematikan pesan ini
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: 'Perintah ini hanya dapat digunakan oleh _*Ilman*_',
-    owner: 'Perintah ini hanya dapat digunakan oleh _*Ilman*_',
+    rowner: 'Perintah ini hanya dapat digunakan oleh _*Owner*_',
+    owner: 'Perintah ini hanya dapat digunakan oleh _*Owner*_',
     mods: 'Perintah ini hanya dapat digunakan oleh _*Admin Shiraori*_',
     premium: 'Perintah ini hanya untuk pengguna _*Premium*_',
     group: 'Perintah ini hanya dapat digunakan di grup',
